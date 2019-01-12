@@ -83,7 +83,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-unsigned int alpha = 0xed;
+unsigned int alpha = 0xaa;
 
 static const char *colorname[] = {
 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
@@ -179,7 +179,7 @@ ResourcePref resources[] = {
 		{ "tabspaces",    INTEGER, &tabspaces },
 		{ "cwscale",      FLOAT,   &cwscale },
 		{ "chscale",      FLOAT,   &chscale },
-		{ "alpha",      INTEGER,   &alpha },
+		{ "alpha",        INTEGER,   &alpha },
 };
 
 /*
@@ -219,8 +219,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_minus,       zoom,           {.f = -1} },
 	{ MODKEY,		XK_Home,	zoomreset,	{.f =  0} },
 	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
-	{ MODKEY|ShiftMask,     XK_c,           clipcopy,       {.i =  0} },
-	{ MODKEY|ShiftMask,     XK_V,           selpaste/*clippaste*/,      {.i =  0} },
+	{ MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
+	{ MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
 	{ MODKEY,               XK_p,           selpaste,       {.i =  0} },
 	{ MODKEY,		XK_Num_Lock,	numlock,	{.i =  0} },
 	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
